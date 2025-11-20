@@ -1,15 +1,15 @@
 # -*- Makefile -*-
 
 ## Find all RMD files beginning with "exercise":
-RMDS := $(wildcard exercise*.Rmd)
+QMDS := $(wildcard exercise*.qmd)
 
 ## Strip the file extension off the located RMD files:
-NAMES := $(RMDS:%.Rmd=%)
+NAMES := $(QMDS:%.qmd=%)
 
 all: ${NAMES}
 
 ## Rule to compile both the RMD files with and without solutions: 
-%: %.Rmd
+%: %.qmd
 	Rscript --vanilla render.R $@ TRUE
 	Rscript --vanilla render.R $@ FALSE
 

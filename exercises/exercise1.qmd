@@ -2,8 +2,6 @@
 title: "Exercise 1"
 ---
 
----
-
 In this exercise you will get acquainted with R and RStudio. RStudio adds many 
 convenience features to the base R that you obtained from 
 [http://r-project.org](http://r-project.org). Most of these features go beyond 

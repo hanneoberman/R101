@@ -1,23 +1,12 @@
 ---
 title: "Exercise 2"
-author: "Kyle M. Lang"
-date: "Updated: 2022-02-04"
 params:
   answers: true
-output: 
-   bookdown::html_document2:
-    toc: true
-    toc_depth: 1
-    toc_float: true
-    number_sections: true
-    css: "style.css"
 ---
 
 ```{r, echo = FALSE}
 knitr::opts_chunk$set(include = params$answers)
 ```
-
----
 
 In this practical, you will play around with the different types of R objects. 
 
@@ -283,14 +272,10 @@ Convert the `v1` variable into a factor with the levels:
 - Cape Town 
 
 ```{r}
-dat3$v1 <- factor(dat3$v1, 
-                  labels = c("Utrecht", 
-                             "New York", 
-                             "London", 
-                             "Singapore", 
-                             "Rome", 
-                             "Cape Town")
-                  )
+dat3$v1 <- factor(
+  dat3$v1,
+  labels = c("Utrecht", "New York", "London", "Singapore", "Rome", "Cape Town")
+  )
 dat3
 ```
 
