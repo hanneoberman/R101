@@ -1,14 +1,5 @@
 ---
 title: "Exercise 1"
-author: "Kyle M. Lang"
-date: "Updated: 2022-02-04"
-output: 
-   bookdown::html_document2:
-    toc: true
-    toc_depth: 1
-    toc_float: true
-    number_sections: true
-    css: "style.css"
 ---
 
 ---
@@ -217,7 +208,7 @@ through pages back and forth to compare code, graphs, or output.
 The notebook feature in RStudio is very convenient; it runs any R code and 
 converts the results into a readable file where code and output are both 
 visible. There is, however, an even better format for integrating R code with 
-text into a single document: **rmarkdown**!
+text into a single document: **markdown**!
 
 ---
 
@@ -225,34 +216,28 @@ text into a single document: **rmarkdown**!
 
 ---
 
-## About rmarkdown
+## About Quarto markdown
 
-<center>
-<iframe src="https://player.vimeo.com/video/178485416?color=428bca&title=0&byline=0&portrait=0" width="500" height="315" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
-<p><a href="https://vimeo.com/178485416">What is R Markdown?</a> from <a href="https://vimeo.com/rstudioinc">RStudio, Inc.</a> on <a href="https://vimeo.com">Vimeo</a>.</p>
-</center>
-
-Also, see this [rmarkdown cheat sheet](https://rstudio.com/wp-content/uploads/2015/02/rmarkdown-cheatsheet.pdf). 
+[Quarto](https://quarto.org/) is a tool for creating documents that combine code, results, and narrative text in one file. Like Jupyter notebooks, Quarto markdown documents provide a cleaner, more professional, more reproducible way to publish analyses compared to plain code scripts.
 
 ---
 
 ##
 
-**Open the file *markdown.Rmd***
+**Open the file *markdown.qmd***
 
-You can download a ZIP archive containing *markdown.Rmd* [here](markdown.zip)
+You can download a ZIP archive containing *markdown.qmd* [here](markdown.zip)
 
-Have a look at the code in the *markdown.Rmd* file and make sure that you 
+Have a look at the code in the *markdown.qmd* file and make sure that you 
 understand what's going on.
 
 ---
 
 ##
 
-**Compile the RMD script into an HTML file**
+**Compile the Quarto document into an HTML file**
 
-1. Click the ![knit button](figures/knit.png) button and select "Knit to HTML" 
-to compile the file into an HTML document. 
+1. Click the ![render button](figures/render.png) button to compile the file into an HTML document. 
    - If necessary, install the required packages. 
 1. Inspect the HTML file and compare it to the one you created from the 
 *notebook.R* file.
@@ -264,8 +249,8 @@ The rmarkdown functionality in RStudio, on the other hand, is a well-polished
 production device to mark-up high quality documents where text and code/output 
 are woven together. 
 
-- Please use rmarkdown to prepare your work for this course, and submit both the 
-RMD and HTML files whenever you need to hand in exercises or assignments. 
+- Please use Quarto markdown to prepare your work for this course, and submit both the 
+`qmd` and HTML files whenever you need to hand in exercises or assignments. 
 
 ---
 

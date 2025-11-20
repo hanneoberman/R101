@@ -1,8 +1,5 @@
 ---
 title: "Exercises in Markdown"
-author: "Kyle M. Lang"
-date: "Updated: 2022-02-04"
-output: html_document
 ---
 
 ---
