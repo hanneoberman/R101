@@ -17,7 +17,7 @@ Please do so before proceeding on to the exercises.
 
 <!----------------------------------------------------------------------------->
 
-# Course contents
+## Course contents
 
 ### Installation
 

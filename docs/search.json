@@ -4,7 +4,17 @@
     "href": "index.html",
     "title": "R 101",
     "section": "",
-    "text": "This tutorial covers basic R usage.\nYou have probably been directed to this page because you are participating in a course that requires R programming. In that course, you will most likely use both R and RStudio. This tutorial comprises three exercises that are intended to guide you through the initial steps of getting up-and-running with R.\nBefore you can do any R programming, however, you will need to install R and RStudio. The steps below will guide you through installing both R and RStudio. Please do so before proceeding on to the exercises.\n\n\nCourse contents\n\nInstallation\nBefore you start the exercises, make sure you can use R either locally on your PC or online through Posit Cloud.\n\nIntsallation\n\n\n\nExercises\nThis tutorial is broken into the following three exercises.\n\nExercise 1\nExercise 2\nExercise 3\n\n\n\nSolutions\nBelow, you can find suggested solutions for the above exercises.\n\nExercise 1 Solutions\nExercise 2 Solutions\nExercise 3 Solutions\n\nThese solutions are provided so you can check your work and unstick yourself if you really can’t figure out one of the exercise questions. You should make a concerted effort to complete each exercise yourself before you view these solutions. You won’t get much out of this tutorial if you skip right to the answers.\n\n\n\n\n\n—  Copyright Hanne Oberman, 2025 - CC BY-NC-SA 4.0  Materials developed by Amices team - Methodology & Statistics - Utrecht University",
+    "text": "This tutorial covers basic R usage.\nYou have probably been directed to this page because you are participating in a course that requires R programming. In that course, you will most likely use both R and RStudio. This tutorial comprises three exercises that are intended to guide you through the initial steps of getting up-and-running with R.\nBefore you can do any R programming, however, you will need to install R and RStudio. The steps below will guide you through installing both R and RStudio. Please do so before proceeding on to the exercises.\n—  Copyright Hanne Oberman, 2025 - CC BY-NC-SA 4.0  Materials developed by Amices team - Methodology & Statistics - Utrecht University",
+    "crumbs": [
+      "Overview"
+    ]
+  },
+  {
+    "objectID": "index.html#course-contents",
+    "href": "index.html#course-contents",
+    "title": "R 101",
+    "section": "Course contents",
+    "text": "Course contents\n\nInstallation\nBefore you start the exercises, make sure you can use R either locally on your PC or online through Posit Cloud.\n\nIntsallation\n\n\n\nExercises\nThis tutorial is broken into the following three exercises.\n\nExercise 1\nExercise 2\nExercise 3\n\n\n\nSolutions\nBelow, you can find suggested solutions for the above exercises.\n\nExercise 1 Solutions\nExercise 2 Solutions\nExercise 3 Solutions\n\nThese solutions are provided so you can check your work and unstick yourself if you really can’t figure out one of the exercise questions. You should make a concerted effort to complete each exercise yourself before you view these solutions. You won’t get much out of this tutorial if you skip right to the answers.",
     "crumbs": [
       "Overview"
     ]
