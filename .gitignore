@@ -47,3 +47,5 @@ cache
 # Knitr figure directory
 /figure/
 figure
+
+/.quarto/
