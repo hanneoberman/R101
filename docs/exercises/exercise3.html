@@ -180,30 +180,9 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
     <h2 id="toc-title">On this page</h2>
    
   <ul>
-  <li><a href="#data-io" id="toc-data-io" class="nav-link active" data-scroll-target="#data-io">Data I/O</a>
-  <ul class="collapse">
-  <li><a href="#section" id="toc-section" class="nav-link" data-scroll-target="#section"></a></li>
-  <li><a href="#section-1" id="toc-section-1" class="nav-link" data-scroll-target="#section-1"></a></li>
-  <li><a href="#section-2" id="toc-section-2" class="nav-link" data-scroll-target="#section-2"></a></li>
-  <li><a href="#section-3" id="toc-section-3" class="nav-link" data-scroll-target="#section-3"></a></li>
-  <li><a href="#section-4" id="toc-section-4" class="nav-link" data-scroll-target="#section-4"></a></li>
-  </ul></li>
-  <li><a href="#working-with-data" id="toc-working-with-data" class="nav-link" data-scroll-target="#working-with-data">Working with Data</a>
-  <ul class="collapse">
-  <li><a href="#section-5" id="toc-section-5" class="nav-link" data-scroll-target="#section-5"></a></li>
-  <li><a href="#section-6" id="toc-section-6" class="nav-link" data-scroll-target="#section-6"></a></li>
-  <li><a href="#plotQ" id="toc-plotQ" class="nav-link" data-scroll-target="#plotQ"></a></li>
-  <li><a href="#flagQ" id="toc-flagQ" class="nav-link" data-scroll-target="#flagQ"></a></li>
-  <li><a href="#section-7" id="toc-section-7" class="nav-link" data-scroll-target="#section-7"></a></li>
-  </ul></li>
-  <li><a href="#workspace-io" id="toc-workspace-io" class="nav-link" data-scroll-target="#workspace-io">Workspace I/O</a>
-  <ul class="collapse">
-  <li><a href="#saveQ" id="toc-saveQ" class="nav-link" data-scroll-target="#saveQ"></a></li>
-  <li><a href="#section-8" id="toc-section-8" class="nav-link" data-scroll-target="#section-8"></a></li>
-  <li><a href="#section-9" id="toc-section-9" class="nav-link" data-scroll-target="#section-9"></a></li>
-  <li><a href="#section-10" id="toc-section-10" class="nav-link" data-scroll-target="#section-10"></a></li>
-  <li><a href="#section-11" id="toc-section-11" class="nav-link" data-scroll-target="#section-11"></a></li>
-  </ul></li>
+  <li><a href="#data-io" id="toc-data-io" class="nav-link active" data-scroll-target="#data-io">Data I/O</a></li>
+  <li><a href="#working-with-data" id="toc-working-with-data" class="nav-link" data-scroll-target="#working-with-data">Working with Data</a></li>
+  <li><a href="#workspace-io" id="toc-workspace-io" class="nav-link" data-scroll-target="#workspace-io">Workspace I/O</a></li>
   <li><a href="#a-useful-package-for-data-io" id="toc-a-useful-package-for-data-io" class="nav-link" data-scroll-target="#a-useful-package-for-data-io">A Useful Package for Data I/O</a></li>
   </ul>
 </nav>
@@ -241,54 +220,19 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <section id="data-io" class="level1">
 <h1>Data I/O</h1>
 <hr>
-<section id="section" class="level2">
-<h2 class="anchored" data-anchor-id="section"></h2>
 <p><strong>Install the <em>mice</em> package</strong></p>
 <p>Use the <code>install.packages()</code> function to install the the <strong>mice</strong> package.</p>
-<div class="cell">
-<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="fu">install.packages</span>(<span class="st">"mice"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-</div>
-<div class="cell">
-<p>If all went well, you will receive a message in the console telling you that the package has been installed.</p>
-</div>
 <hr>
-</section>
-<section id="section-1" class="level2">
-<h2 class="anchored" data-anchor-id="section-1"></h2>
 <p><strong>Load the <em>mice</em> package</strong></p>
 <p>Use the <code>library()</code> function to load the <strong>mice</strong> package.</p>
-<div class="cell">
-<div class="sourceCode cell-code" id="cb2"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(mice)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-</div>
-<div class="cell">
-<ul>
-<li>Installing the package only makes the package available on your machine.</li>
-<li>You have to load the package every time you want to use it in a new R session.</li>
-</ul>
-</div>
 <hr>
-</section>
-<section id="section-2" class="level2">
-<h2 class="anchored" data-anchor-id="section-2"></h2>
 <p><strong>View the <code>mammalsleep</code> data</strong></p>
 <p>Most packages have datasets included. Open the <code>mammalsleep</code> dataset from the <strong>mice</strong> package in two ways:</p>
 <ol type="1">
 <li>By evaluating its name, <code>mammalsleep</code>, directly</li>
 <li>By using the <code>View()</code> function</li>
 </ol>
-<div class="cell">
-<div class="sourceCode cell-code" id="cb3"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="do">## I'm not actually running these lines because the results would clutter </span></span>
-<span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a><span class="do">## this document too much.</span></span>
-<span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a>mammalSleep</span>
-<span id="cb3-4"><a href="#cb3-4" aria-hidden="true" tabindex="-1"></a><span class="fu">View</span>(mammalSleep)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-</div>
-<div class="cell">
-<p>Using <code>View()</code> is preferred for inspecting large datasets because <code>View()</code> opens the dataset in a spreadsheet-like window.</p>
-</div>
 <hr>
-</section>
-<section id="section-3" class="level2">
-<h2 class="anchored" data-anchor-id="section-3"></h2>
 <p><strong>Write the <code>mammalsleep</code> dataset to disk</strong></p>
 <p>Save the <code>mammalsleep</code> dataset that you viewed above to your working directory.</p>
 <ul>
@@ -296,169 +240,20 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <li>Use the <code>.</code> character as the decimal separator.</li>
 <li>Name the file <code>mammalsleep.txt</code></li>
 </ul>
-<div class="cell">
-<div class="sourceCode cell-code" id="cb4"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="fu">write.table</span>(mammalsleep, </span>
-<span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a>            <span class="at">file =</span> <span class="st">"mammalsleep.txt"</span>, </span>
-<span id="cb4-3"><a href="#cb4-3" aria-hidden="true" tabindex="-1"></a>            <span class="at">sep =</span> <span class="st">"</span><span class="sc">\t</span><span class="st">"</span>, </span>
-<span id="cb4-4"><a href="#cb4-4" aria-hidden="true" tabindex="-1"></a>            <span class="at">dec =</span> <span class="st">"."</span>, </span>
-<span id="cb4-5"><a href="#cb4-5" aria-hidden="true" tabindex="-1"></a>            <span class="at">row.names =</span> <span class="cn">FALSE</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-</div>
-<div class="cell">
-<ul>
-<li>The command <code>sep = "\t"</code> creates a tab-delimited file</li>
-<li>The command <code>dec = "."</code> specifies the <code>.</code> character as the decimal seperator (instead of a comma).</li>
-<li>The command <code>row.names = FALSE</code> tells R not to include row names in the exported file.</li>
-</ul>
-</div>
 <hr>
-</section>
-<section id="section-4" class="level2">
-<h2 class="anchored" data-anchor-id="section-4"></h2>
 <p><strong>Read the <code>mammalsleep.txt</code> file from disk</strong></p>
 <p>Read in the data that you just saved to disk and save it as a new R object called <code>sleepdata</code>.</p>
-<div class="cell">
-<div class="sourceCode cell-code" id="cb5"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a>sleepdata <span class="ot">&lt;-</span> <span class="fu">read.table</span>(<span class="st">"mammalsleep.txt"</span>, </span>
-<span id="cb5-2"><a href="#cb5-2" aria-hidden="true" tabindex="-1"></a>                        <span class="at">sep =</span> <span class="st">"</span><span class="sc">\t</span><span class="st">"</span>, </span>
-<span id="cb5-3"><a href="#cb5-3" aria-hidden="true" tabindex="-1"></a>                        <span class="at">dec =</span> <span class="st">"."</span>, </span>
-<span id="cb5-4"><a href="#cb5-4" aria-hidden="true" tabindex="-1"></a>                        <span class="at">header =</span> <span class="cn">TRUE</span>, </span>
-<span id="cb5-5"><a href="#cb5-5" aria-hidden="true" tabindex="-1"></a>                        <span class="at">stringsAsFactors =</span> <span class="cn">TRUE</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-</div>
-<div class="cell">
-<ul>
-<li>The command <code>sep = "\t"</code> indicates that the file is tab-delimited</li>
-<li>The command <code>dec = "."</code> indicates that a <code>.</code> is used as the decimal seperator</li>
-<li>The command <code>header = TRUE</code> tells R that the first row of data contains the variable names</li>
-<li>The <code>stringsAsFactors = TRUE</code> command will automatically convert any character variables to factors</li>
-</ul>
-<p>You can read files that live in the working directory by specifying only the file name (with the file extension). To read files that live in any other location, you need to specify the full file path (either relative to the working directory or an absolute path). To find the current working directory, you can run <code>getwd()</code>. To change the working directory, you can use <code>setwd()</code>. One benefit of using RStudio projects is that the working directory is automatically set to the main project directory.</p>
-<p>There are many packages that facilitate data I/O from other statistical software packages such as:</p>
-<ul>
-<li>SPSS (e.g.&nbsp;<code>read_spss()</code> from the <strong>haven</strong> package)</li>
-<li>Mplus (routines in the <strong>MplusAutomation</strong> package)</li>
-<li>Stata (<code>read.dta()</code> in the <strong>foreign</strong> package)</li>
-<li>SAS (<code>sasxport.get()</code> from the <strong>Hmisc</strong> package)</li>
-</ul>
-<p>There are also packages to read data from spreadsheet software such as MS Excel (<code>read.xlsx()</code> from the <code>xlsx</code> package).</p>
-<p>For a short guide on importing multiple file formats into R, see <a href="http://www.statmethods.net/input/importingdata.html">this page</a>.</p>
-</div>
 <hr>
-</section>
 </section>
 <section id="working-with-data" class="level1">
 <h1>Working with Data</h1>
 <hr>
-<section id="section-5" class="level2">
-<h2 class="anchored" data-anchor-id="section-5"></h2>
 <p><strong>Explore the data</strong></p>
 <p>The dataset you’ve just imported contains the sleep data from Allison and Cicchetti (1976).</p>
 <ul>
 <li>Explore these data, and familiarize yourself with the characteristics of the dataset.</li>
 </ul>
-<div class="cell">
-<p>There is no completely right or wrong way to go about exploring a dataset, but the following commands represent some potential options.</p>
-</div>
-<div class="cell">
-<div class="sourceCode cell-code" id="cb6"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a><span class="do">## Call up the documentation for the original dataset in the mice package:</span></span>
-<span id="cb6-2"><a href="#cb6-2" aria-hidden="true" tabindex="-1"></a>?mammalsleep</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-</div>
-<div class="cell">
-<div class="sourceCode cell-code" id="cb7"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a><span class="do">## Show the data structure:</span></span>
-<span id="cb7-2"><a href="#cb7-2" aria-hidden="true" tabindex="-1"></a><span class="fu">str</span>(sleepdata)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-stdout">
-<pre><code>'data.frame':   62 obs. of  11 variables:
- $ species: Factor w/ 62 levels "African elephant",..: 1 2 3 4 5 6 7 8 9 10 ...
- $ bw     : num  6654 1 3.38 0.92 2547 ...
- $ brw    : num  5712 6.6 44.5 5.7 4603 ...
- $ sws    : num  NA 6.3 NA NA 2.1 9.1 15.8 5.2 10.9 8.3 ...
- $ ps     : num  NA 2 NA NA 1.8 0.7 3.9 1 3.6 1.4 ...
- $ ts     : num  3.3 8.3 12.5 16.5 3.9 9.8 19.7 6.2 14.5 9.7 ...
- $ mls    : num  38.6 4.5 14 NA 69 27 19 30.4 28 50 ...
- $ gt     : num  645 42 60 25 624 180 35 392 63 230 ...
- $ pi     : int  3 3 1 5 3 4 1 4 1 1 ...
- $ sei    : int  5 1 1 2 5 4 1 5 2 1 ...
- $ odi    : int  3 3 1 3 4 4 1 4 1 1 ...</code></pre>
-</div>
-<div class="sourceCode cell-code" id="cb9"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb9-1"><a href="#cb9-1" aria-hidden="true" tabindex="-1"></a><span class="do">## Show summaries of the univariate distributions:</span></span>
-<span id="cb9-2"><a href="#cb9-2" aria-hidden="true" tabindex="-1"></a><span class="fu">summary</span>(sleepdata)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-stdout">
-<pre><code>                      species         bw                brw         
- African elephant         : 1   Min.   :   0.005   Min.   :   0.14  
- African giant pouched rat: 1   1st Qu.:   0.600   1st Qu.:   4.25  
- Arctic Fox               : 1   Median :   3.342   Median :  17.25  
- Arctic ground squirrel   : 1   Mean   : 198.790   Mean   : 283.13  
- Asian elephant           : 1   3rd Qu.:  48.203   3rd Qu.: 166.00  
- Baboon                   : 1   Max.   :6654.000   Max.   :5712.00  
- (Other)                  :56                                       
-      sws               ps              ts             mls         
- Min.   : 2.100   Min.   :0.000   Min.   : 2.60   Min.   :  2.000  
- 1st Qu.: 6.250   1st Qu.:0.900   1st Qu.: 8.05   1st Qu.:  6.625  
- Median : 8.350   Median :1.800   Median :10.45   Median : 15.100  
- Mean   : 8.673   Mean   :1.972   Mean   :10.53   Mean   : 19.878  
- 3rd Qu.:11.000   3rd Qu.:2.550   3rd Qu.:13.20   3rd Qu.: 27.750  
- Max.   :17.900   Max.   :6.600   Max.   :19.90   Max.   :100.000  
- NA's   :14       NA's   :12      NA's   :4       NA's   :4        
-       gt               pi             sei             odi       
- Min.   : 12.00   Min.   :1.000   Min.   :1.000   Min.   :1.000  
- 1st Qu.: 35.75   1st Qu.:2.000   1st Qu.:1.000   1st Qu.:1.000  
- Median : 79.00   Median :3.000   Median :2.000   Median :2.000  
- Mean   :142.35   Mean   :2.871   Mean   :2.419   Mean   :2.613  
- 3rd Qu.:207.50   3rd Qu.:4.000   3rd Qu.:4.000   3rd Qu.:4.000  
- Max.   :645.00   Max.   :5.000   Max.   :5.000   Max.   :5.000  
- NA's   :4                                                       </code></pre>
-</div>
-<div class="sourceCode cell-code" id="cb11"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb11-1"><a href="#cb11-1" aria-hidden="true" tabindex="-1"></a><span class="do">## Show (rounded) bivariate correlations (excluding the ID column):</span></span>
-<span id="cb11-2"><a href="#cb11-2" aria-hidden="true" tabindex="-1"></a><span class="fu">round</span>(<span class="fu">cor</span>(sleepdata[, <span class="sc">-</span><span class="dv">1</span>], <span class="at">use =</span> <span class="st">"pairwise.complete.obs"</span>), <span class="dv">2</span>) </span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-stdout">
-<pre><code>       bw   brw   sws    ps    ts   mls    gt    pi   sei   odi
-bw   1.00  0.93 -0.38 -0.11 -0.31  0.30  0.65  0.06  0.34  0.13
-brw  0.93  1.00 -0.37 -0.11 -0.36  0.51  0.75  0.03  0.37  0.15
-sws -0.38 -0.37  1.00  0.51  0.96 -0.38 -0.59 -0.32 -0.54 -0.48
-ps  -0.11 -0.11  0.51  1.00  0.73 -0.30 -0.45 -0.45 -0.54 -0.58
-ts  -0.31 -0.36  0.96  0.73  1.00 -0.41 -0.63 -0.40 -0.64 -0.59
-mls  0.30  0.51 -0.38 -0.30 -0.41  1.00  0.61 -0.10  0.36  0.06
-gt   0.65  0.75 -0.59 -0.45 -0.63  0.61  1.00  0.20  0.64  0.38
-pi   0.06  0.03 -0.32 -0.45 -0.40 -0.10  0.20  1.00  0.62  0.92
-sei  0.34  0.37 -0.54 -0.54 -0.64  0.36  0.64  0.62  1.00  0.79
-odi  0.13  0.15 -0.48 -0.58 -0.59  0.06  0.38  0.92  0.79  1.00</code></pre>
-</div>
-<div class="sourceCode cell-code" id="cb13"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb13-1"><a href="#cb13-1" aria-hidden="true" tabindex="-1"></a><span class="do">## Show the first six rows:</span></span>
-<span id="cb13-2"><a href="#cb13-2" aria-hidden="true" tabindex="-1"></a><span class="fu">head</span>(sleepdata)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-stdout">
-<pre><code>                    species       bw    brw sws  ps   ts  mls  gt pi sei odi
-1          African elephant 6654.000 5712.0  NA  NA  3.3 38.6 645  3   5   3
-2 African giant pouched rat    1.000    6.6 6.3 2.0  8.3  4.5  42  3   1   3
-3                Arctic Fox    3.385   44.5  NA  NA 12.5 14.0  60  1   1   1
-4    Arctic ground squirrel    0.920    5.7  NA  NA 16.5   NA  25  5   2   3
-5            Asian elephant 2547.000 4603.0 2.1 1.8  3.9 69.0 624  3   5   4
-6                    Baboon   10.550  179.5 9.1 0.7  9.8 27.0 180  4   4   4</code></pre>
-</div>
-<div class="sourceCode cell-code" id="cb15"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb15-1"><a href="#cb15-1" aria-hidden="true" tabindex="-1"></a><span class="do">## Show the last six rows:</span></span>
-<span id="cb15-2"><a href="#cb15-2" aria-hidden="true" tabindex="-1"></a><span class="fu">tail</span>(sleepdata)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-stdout">
-<pre><code>                 species    bw  brw  sws  ps   ts  mls  gt pi sei odi
-57                Tenrec 0.900  2.6 11.0 2.3 13.3  4.5  60  2   1   2
-58            Tree hyrax 2.000 12.3  4.9 0.5  5.4  7.5 200  3   1   3
-59            Tree shrew 0.104  2.5 13.2 2.6 15.8  2.3  46  3   2   2
-60                Vervet 4.190 58.0  9.7 0.6 10.3 24.0 210  4   3   4
-61         Water opossum 3.500  3.9 12.8 6.6 19.4  3.0  14  2   1   1
-62 Yellow-bellied marmot 4.050 17.0   NA  NA   NA 13.0  38  3   1   1</code></pre>
-</div>
-</div>
-<div class="cell">
-<p>Since <code>mammalsleep</code> is an R dataset, it should have a help file. The documentation for the <code>mammalsleep</code> dataset may yield valuable insight about the origin of the data and the variables included therein.</p>
-<p>The functions <code>head()</code> and <code>tail()</code> are very useful. If something went from with reading the data, you can often tell very quickly by looking at the first or last rows (do they look like you expected)?</p>
-<p>The <code>str</code> function is a good way to get a quick overview of the measurement levels in a dataset.</p>
-<ul>
-<li>Notice how the information returned by the <code>str()</code> function looks very similar to the information you see in RStudio’s Environment tab.</li>
-<li>The Environment tab is simply reporting the results of the <code>str()</code> function in a pretty format.</li>
-</ul>
-<p>Notice that <code>sleepdata</code> is a data frame. The <code>read.table()</code> function will return the data it reads as a data frame.</p>
-<p>One thing that may have caught your attention is the relation between <code>ts</code>, <code>ps</code> and <code>sws</code>. This relation is deterministic: total sleep (<code>ts</code>) is the sum of paradoxical sleep (<code>ps</code>) and short-wave sleep (<code>sws</code>). If you were to model these data, you would need to account for such relations in your analysis.</p>
-</div>
 <hr>
-</section>
-<section id="section-6" class="level2">
-<h2 class="anchored" data-anchor-id="section-6"></h2>
 <p><strong>Subset the data</strong></p>
 <p>Some animals were not used by Allison and Cicchetti (1976).</p>
 <ol type="1">
@@ -470,176 +265,29 @@ odi  0.13  0.15 -0.48 -0.58 -0.59  0.06  0.38  0.92  0.79  1.00</code></pre>
 </ul></li>
 <li>Save the dataset as <code>sleepdata2</code></li>
 </ol>
-<div class="cell">
-<p>There are at least three ways to exclude these animals from the dataset.</p>
-<p>The first two approaches both require us to use the <code>species</code> variable to create a logical vector flagging the rows to drop.</p>
-</div>
-<div class="cell">
-<div class="sourceCode cell-code" id="cb17"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb17-1"><a href="#cb17-1" aria-hidden="true" tabindex="-1"></a>exclusions <span class="ot">&lt;-</span> sleepdata<span class="sc">$</span>species <span class="sc">%in%</span> </span>
-<span id="cb17-2"><a href="#cb17-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">c</span>(<span class="st">"Echidna"</span>, <span class="st">"Lesser short-tailed shrew"</span>, <span class="st">"Musk shrew"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-</div>
-<div class="cell">
-<ol type="a">
-<li>The first approach uses standard, base R subsetting procedures:</li>
-</ol>
-</div>
-<div class="cell">
-<div class="sourceCode cell-code" id="cb18"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb18-1"><a href="#cb18-1" aria-hidden="true" tabindex="-1"></a><span class="do">## Negate the logical vector to select all rows other than the exclusions:</span></span>
-<span id="cb18-2"><a href="#cb18-2" aria-hidden="true" tabindex="-1"></a>sleepdata2 <span class="ot">&lt;-</span> sleepdata[<span class="sc">!</span>exclusions, ]</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-</div>
-<div class="cell">
-<ol start="2" type="a">
-<li>The second approach uses the <code>filter()</code> function from the <code>dplyr</code> package:</li>
-</ol>
-</div>
-<div class="cell">
-<div class="sourceCode cell-code" id="cb19"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb19-1"><a href="#cb19-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(dplyr)</span>
-<span id="cb19-2"><a href="#cb19-2" aria-hidden="true" tabindex="-1"></a>sleepdata2 <span class="ot">&lt;-</span> <span class="fu">filter</span>(sleepdata, <span class="sc">!</span>exclusions)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-</div>
-<div class="cell">
-<ol start="3" type="a">
-<li>The third approach uses the row numbers directly
-<ul>
-<li>You will need to manually figure out which row numbers you want to exclude</li>
-</ul></li>
-</ol>
-</div>
-<div class="cell">
-<div class="sourceCode cell-code" id="cb20"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb20-1"><a href="#cb20-1" aria-hidden="true" tabindex="-1"></a>sleepdata2 <span class="ot">&lt;-</span> sleepdata[<span class="sc">-</span><span class="fu">c</span>(<span class="dv">16</span>, <span class="dv">32</span>, <span class="dv">38</span>), ]</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-</div>
-<div class="cell">
-<p>Note that the row number option requires less code, but the first two options have much lower probabilities for error.</p>
-<ul>
-<li>If the dataset changes or the rows are sorted differently, the row number option may not work correctly (i.e., you’d exclude the wrong cases).</li>
-<li>Since you find the rows programatically in the first two options, they are much more robust to changes in the data.</li>
-</ul>
-</div>
 <hr>
-</section>
-<section id="plotQ" class="level2">
-<h2 class="anchored" data-anchor-id="plotQ"></h2>
+<div class="{cref-plot}">
 <p><strong>Plot brain weight as a function of species</strong></p>
+</div>
 <p>Use the <code>sleepdata2</code> dataset and base R graphics routines to create a plot of <em>brain weight</em> against <em>species</em>.</p>
-<div class="cell">
-<div class="sourceCode cell-code" id="cb21"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb21-1"><a href="#cb21-1" aria-hidden="true" tabindex="-1"></a><span class="fu">plot</span>(brw <span class="sc">~</span> species, <span class="at">data =</span> sleepdata2)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output-display">
-<div>
-<figure class="figure">
-<p><img src="exercise3_files/figure-html/unnamed-chunk-24-1.png" class="img-fluid figure-img" width="672"></p>
-</figure>
-</div>
-</div>
-</div>
 <hr>
-</section>
-<section id="flagQ" class="level2">
-<h2 class="anchored" data-anchor-id="flagQ"></h2>
+<div class="{cref-flag}">
 <p><strong>Conditional case selection</strong></p>
+</div>
 <p>Some animals have much heavier brains than other animals. Find the names of all animals that have a brain weight larger than 1 standard deviation above the mean brain weight.</p>
-<div class="cell">
-<div class="sourceCode cell-code" id="cb22"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb22-1"><a href="#cb22-1" aria-hidden="true" tabindex="-1"></a><span class="do">## Create a logical vector flagging the rows with extreme brain weights:</span></span>
-<span id="cb22-2"><a href="#cb22-2" aria-hidden="true" tabindex="-1"></a>bigBrains <span class="ot">&lt;-</span> sleepdata2<span class="sc">$</span>brw <span class="sc">&gt;</span> (<span class="fu">mean</span>(sleepdata2<span class="sc">$</span>brw) <span class="sc">+</span> <span class="fu">sd</span>(sleepdata2<span class="sc">$</span>brw))</span>
-<span id="cb22-3"><a href="#cb22-3" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb22-4"><a href="#cb22-4" aria-hidden="true" tabindex="-1"></a><span class="do">## Extract the names from any row flagged by the above vector:</span></span>
-<span id="cb22-5"><a href="#cb22-5" aria-hidden="true" tabindex="-1"></a><span class="fu">as.character</span>(sleepdata2<span class="sc">$</span>species[bigBrains])</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-stdout">
-<pre><code>[1] "African elephant" "Asian elephant"   "Man"             </code></pre>
-</div>
-</div>
-</section>
-<section id="section-7" class="level2">
-<h2 class="anchored" data-anchor-id="section-7"></h2>
 <p><strong>Plot of big-brained animals</strong></p>
-<p>Replicate the plot from Question @ref(plotQ) with only the animals you flagged in Question @ref(flagQ).</p>
+<p>Replicate the plot from <span class="citation" data-cites="cref-plot">@cref-plot</span> with only the animals you flagged in <span class="citation" data-cites="cref-flag">@cref-flag</span></p>
 <ul>
 <li>Do not plot any information about the other animals.</li>
 </ul>
-<div class="cell">
-<p>A naive attempt may simply try to run the same plotting code with a subset of the data.</p>
-</div>
-<div class="cell">
-<div class="sourceCode cell-code" id="cb24"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb24-1"><a href="#cb24-1" aria-hidden="true" tabindex="-1"></a><span class="fu">plot</span>(brw <span class="sc">~</span> species, <span class="at">data =</span> sleepdata2[bigBrains, ])</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output-display">
-<div>
-<figure class="figure">
-<p><img src="exercise3_files/figure-html/unnamed-chunk-27-1.png" class="img-fluid figure-img" width="672"></p>
-</figure>
-</div>
-</div>
-</div>
-<div class="cell">
-<p>The downside to this approach is that it still includes all animals on the x-axis. The original factor labels for <code>species</code> remain unchanged in the subset of the original data.</p>
-</div>
-<div class="cell">
-<div class="sourceCode cell-code" id="cb25"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb25-1"><a href="#cb25-1" aria-hidden="true" tabindex="-1"></a><span class="fu">levels</span>(sleepdata2<span class="sc">$</span>species[bigBrains])</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-stdout">
-<pre><code> [1] "African elephant"          "African giant pouched rat"
- [3] "Arctic Fox"                "Arctic ground squirrel"   
- [5] "Asian elephant"            "Baboon"                   
- [7] "Big brown bat"             "Brazilian tapir"          
- [9] "Cat"                       "Chimpanzee"               
-[11] "Chinchilla"                "Cow"                      
-[13] "Desert hedgehog"           "Donkey"                   
-[15] "Eastern American mole"     "Echidna"                  
-[17] "European hedgehog"         "Galago"                   
-[19] "Genet"                     "Giant armadillo"          
-[21] "Giraffe"                   "Goat"                     
-[23] "Golden hamster"            "Gorilla"                  
-[25] "Gray seal"                 "Gray wolf"                
-[27] "Ground squirrel"           "Guinea pig"               
-[29] "Horse"                     "Jaguar"                   
-[31] "Kangaroo"                  "Lesser short-tailed shrew"
-[33] "Little brown bat"          "Man"                      
-[35] "Mole rat"                  "Mountain beaver"          
-[37] "Mouse"                     "Musk shrew"               
-[39] "N. American opossum"       "Nine-banded armadillo"    
-[41] "Okapi"                     "Owl monkey"               
-[43] "Patas monkey"              "Phanlanger"               
-[45] "Pig"                       "Rabbit"                   
-[47] "Raccoon"                   "Rat"                      
-[49] "Red fox"                   "Rhesus monkey"            
-[51] "Rock hyrax (Hetero. b)"    "Rock hyrax (Procavia hab)"
-[53] "Roe deer"                  "Sheep"                    
-[55] "Slow loris"                "Star nosed mole"          
-[57] "Tenrec"                    "Tree hyrax"               
-[59] "Tree shrew"                "Vervet"                   
-[61] "Water opossum"             "Yellow-bellied marmot"    </code></pre>
-</div>
-</div>
-<div class="cell">
-<p>The <code>plot()</code> function uses all 62 factor levels to generate the x-axis even though 59 levels are empty.</p>
-<p>To get rid of the unused factor levels, we can use the <code>factor()</code> function.</p>
-</div>
-<div class="cell">
-<div class="sourceCode cell-code" id="cb27"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb27-1"><a href="#cb27-1" aria-hidden="true" tabindex="-1"></a>sleepdata3 <span class="ot">&lt;-</span> sleepdata2[bigBrains, ]</span>
-<span id="cb27-2"><a href="#cb27-2" aria-hidden="true" tabindex="-1"></a>sleepdata3<span class="sc">$</span>species <span class="ot">&lt;-</span> <span class="fu">factor</span>(sleepdata3<span class="sc">$</span>species)</span>
-<span id="cb27-3"><a href="#cb27-3" aria-hidden="true" tabindex="-1"></a><span class="fu">levels</span>(sleepdata3<span class="sc">$</span>species)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-stdout">
-<pre><code>[1] "African elephant" "Asian elephant"   "Man"             </code></pre>
-</div>
-</div>
-<div class="cell">
-<p>Now we can create the plot that we wanted:</p>
-</div>
-<div class="cell">
-<div class="sourceCode cell-code" id="cb29"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb29-1"><a href="#cb29-1" aria-hidden="true" tabindex="-1"></a><span class="fu">plot</span>(brw <span class="sc">~</span> species, <span class="at">data =</span> sleepdata3)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output-display">
-<div>
-<figure class="figure">
-<p><img src="exercise3_files/figure-html/unnamed-chunk-34-1.png" class="img-fluid figure-img" width="672"></p>
-</figure>
-</div>
-</div>
-</div>
 <hr>
-</section>
 </section>
 <section id="workspace-io" class="level1">
 <h1>Workspace I/O</h1>
 <hr>
-<section id="saveQ" class="level2">
-<h2 class="anchored" data-anchor-id="saveQ"></h2>
+<div class="{cref-save}">
 <p><strong>Save the current workspace</strong></p>
+</div>
 <p>Now that we have imported some data and done some analyses and data manipulations, we may want to save the current workspace (i.e.&nbsp;the current state of our R session). Saving the workspace will save everything in the R session exactly as it exists at the moment of saving. So, we can easily continue from this exact state at a later time. All we need to do is re-load the saved workspace file.</p>
 <p>Use the <code>save.image()</code> function to save the entirety of the current workspace.</p>
 <ul>
@@ -649,45 +297,22 @@ odi  0.13  0.15 -0.48 -0.58 -0.59  0.06  0.38  0.92  0.79  1.00</code></pre>
 <ul>
 <li>Name this workspace <code>sleepdata.RData</code>.</li>
 </ul>
-<div class="cell">
-<div class="sourceCode cell-code" id="cb30"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb30-1"><a href="#cb30-1" aria-hidden="true" tabindex="-1"></a><span class="fu">save.image</span>(<span class="st">"practical3.RData"</span>)</span>
-<span id="cb30-2"><a href="#cb30-2" aria-hidden="true" tabindex="-1"></a><span class="fu">save</span>(sleepdata, <span class="at">file =</span> <span class="st">"sleepdata.RData"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-</div>
 <hr>
-</section>
-<section id="section-8" class="level2">
-<h2 class="anchored" data-anchor-id="section-8"></h2>
 <p><strong>Clear the workspace</strong></p>
 <p>Run the following command to clear the workspace.</p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb31"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb31-1"><a href="#cb31-1" aria-hidden="true" tabindex="-1"></a><span class="fu">rm</span>(<span class="at">list =</span> <span class="fu">ls</span>(<span class="at">all =</span> <span class="cn">TRUE</span>))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="fu">rm</span>(<span class="at">list =</span> <span class="fu">ls</span>(<span class="at">all =</span> <span class="cn">TRUE</span>))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 <p>This is a very handy line of code to memorize. It will clear nearly everything from your current workspace. If you’re curious about how it does so, check the help files for the <code>rm()</code> and <code>ls()</code> functions.</p>
-</section>
-<section id="section-9" class="level2">
-<h2 class="anchored" data-anchor-id="section-9"></h2>
 <p><strong>Load a saved workspace</strong></p>
-<p>Use the <code>load()</code> function to load the <em>practical3.RData</em> workspace that you saved in Question @ref(saveQ).</p>
-<div class="cell">
-<div class="sourceCode cell-code" id="cb32"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb32-1"><a href="#cb32-1" aria-hidden="true" tabindex="-1"></a><span class="fu">load</span>(<span class="st">"practical3.RData"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-</div>
+<p>Use the <code>load()</code> function to load the <em>practical3.RData</em> workspace that you saved in <span class="citation" data-cites="cref-save">@cref-save</span>.</p>
 <hr>
-</section>
-<section id="section-10" class="level2">
-<h2 class="anchored" data-anchor-id="section-10"></h2>
 <p><strong>Load a saved dataset</strong></p>
 <ol type="1">
 <li>Use the <code>rm()</code> function to remove the <code>sleepdata</code> dataset from the environment.</li>
-<li>Use the <code>load()</code> function to reload the <code>sleepdata</code> dataset from the <em>sleepdata.RData</em> workspace you saved in Question @ref(saveQ).</li>
+<li>Use the <code>load()</code> function to reload the <code>sleepdata</code> dataset from the <em>sleepdata.RData</em> workspace you saved in <span class="citation" data-cites="cref-save">@cref-save</span></li>
 </ol>
-<div class="cell">
-<div class="sourceCode cell-code" id="cb33"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb33-1"><a href="#cb33-1" aria-hidden="true" tabindex="-1"></a><span class="fu">rm</span>(sleepdata)</span>
-<span id="cb33-2"><a href="#cb33-2" aria-hidden="true" tabindex="-1"></a><span class="fu">load</span>(<span class="st">"sleepdata.RData"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-</div>
 <hr>
-</section>
-<section id="section-11" class="level2">
-<h2 class="anchored" data-anchor-id="section-11"></h2>
 <p><strong>A better way to read/write R data objects</strong></p>
 <p>You may have noticed that when you load a dataset with <code>read.table()</code>, you assign the result to a new R object. However, when you load a dataset saved as a workspace using the <code>load()</code> function, you cannot rename the resulting R object.</p>
 <p>When saving an R object with the <code>save()</code> function and loading it with the <code>load()</code> function, the object keeps the name it had when saved. When saving and loading individual data objects, this behavior is rarely desirable.</p>
@@ -702,12 +327,7 @@ odi  0.13  0.15 -0.48 -0.58 -0.59  0.06  0.38  0.92  0.79  1.00</code></pre>
 <li>Use the <code>saveRDS()</code> function to save the <code>sleepdata</code> object as <em>sleepdata.rds</em>.</li>
 <li>Use the <code>readRDS()</code> function to load the <em>sleepdata.rds</em> file and assign it to the <code>sleepdata4</code> object.</li>
 </ol>
-<div class="cell">
-<div class="sourceCode cell-code" id="cb34"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb34-1"><a href="#cb34-1" aria-hidden="true" tabindex="-1"></a><span class="fu">saveRDS</span>(sleepdata, <span class="st">"sleepdata.rds"</span>)</span>
-<span id="cb34-2"><a href="#cb34-2" aria-hidden="true" tabindex="-1"></a>sleepdat4 <span class="ot">&lt;-</span> <span class="fu">readRDS</span>(<span class="st">"sleepdata.rds"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-</div>
 <hr>
-</section>
 </section>
 <section id="a-useful-package-for-data-io" class="level1">
 <h1>A Useful Package for Data I/O</h1>

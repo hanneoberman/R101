@@ -18,7 +18,7 @@ OK. Let's begin!
 
 ---
 
-## 
+ 
 
 **Open RStudio**
 
@@ -34,7 +34,7 @@ open to show the script.
 
 ---
 
-## 
+ 
 
 **Open a new R script**
 
@@ -58,7 +58,7 @@ efficient programmer. Remember: Efficient code runs faster!
 
 ---
 
-## 
+ 
 
 **Type the following into your new R script**
 
@@ -78,7 +78,7 @@ could just as well assign the value`"bar"` to the object `foo`, if you like.
 
 ---
 
-## 
+ 
 
 **Execute the commands in your script**
 
@@ -98,7 +98,7 @@ select the console by pressing Ctrl-2 (Windows/Linux/Mac).
 
 ---
 
-##
+
 
 **Save your code file as *practical_1.R* in a folder named *practicals***
 
@@ -109,14 +109,14 @@ RStudio project for your practicals.
 
 ---
 
-##
+
 
 **Close the *practical_1.R* script in the code pane**
 
 Even though you've closed the script, your code is still saved as a permanent 
 code file.
 
-##
+
 
 **Open the *practical_1.R* script**
 
@@ -142,7 +142,7 @@ some information about the objects.
 
 ---
 
-##
+
 
 **Create a new RStudio project**
 
@@ -168,7 +168,7 @@ So, if you share the project with someone else, they only have to open the
 
 ---
 
-##
+
 
 **Open the R script *notebook.R***
 
@@ -176,14 +176,14 @@ You can download a ZIP archive containing *notebook.R* [here](notebook.zip).
 
 ---
 
-##
+
 
 **Have a look at the code in the script and make sure that you understand what 
 it does.**
 
 ---
  
-##
+
 
 **Compile the script as an HTML file**
 
@@ -199,7 +199,7 @@ through pages back and forth to compare code, graphs, or output.
 
 ---
 
-##
+
 
 **Inspect the HTML file you have created**
 
@@ -220,7 +220,7 @@ text into a single document: **markdown**!
 
 ---
 
-##
+
 
 **Open the file *markdown.qmd***
 
@@ -231,7 +231,7 @@ understand what's going on.
 
 ---
 
-##
+
 
 **Compile the Quarto document into an HTML file**
 

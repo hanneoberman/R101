@@ -7,7 +7,7 @@ params:
 ```{r setup, echo = FALSE}
 library(knitr)
 
-## Define an asis engine that will evaluate inline code within an asis block:
+# Define an asis engine that will evaluate inline code within an asis block:
 knit_engines$set(asis = function(options) {
   if(options$echo && options$eval) knit_child(text = options$code)
 }
@@ -35,7 +35,6 @@ characters.
 
 ---
 
-##
 
 **Install the *mice* package**
 
@@ -52,7 +51,7 @@ package has been installed.
 
 ---
 
-##
+
 
 **Load the *mice* package**
 
@@ -69,7 +68,7 @@ library(mice)
 
 ---
 
-##
+
 
 **View the `mammalsleep` data**
 
@@ -80,8 +79,8 @@ Most packages have datasets included. Open the `mammalsleep` dataset from the
 1. By using the `View()` function
 
 ```{r, eval = FALSE}
-## I'm not actually running these lines because the results would clutter 
-## this document too much.
+# I'm not actually running these lines because the results would clutter 
+# this document too much.
 mammalSleep
 View(mammalSleep)
 ```
@@ -93,7 +92,7 @@ the dataset in a spreadsheet-like window.
 
 ---
 
-##
+
 
 **Write the `mammalsleep` dataset to disk**
 
@@ -121,7 +120,7 @@ exported file.
 
 ---
 
-##
+
 
 **Read the `mammalsleep.txt` file from disk**
 
@@ -173,7 +172,7 @@ For a short guide on importing multiple file formats into R, see
 
 ---
 
-##
+
 
 **Explore the data**
 
@@ -189,24 +188,24 @@ the following commands represent some potential options.
 ```
 
 ```{r, eval = FALSE}
-## Call up the documentation for the original dataset in the mice package:
+# Call up the documentation for the original dataset in the mice package:
 ?mammalsleep
 ```
 
 ```{r}
-## Show the data structure:
+# Show the data structure:
 str(sleepdata)
 
-## Show summaries of the univariate distributions:
+# Show summaries of the univariate distributions:
 summary(sleepdata)
 
-## Show (rounded) bivariate correlations (excluding the ID column):
+# Show (rounded) bivariate correlations (excluding the ID column):
 round(cor(sleepdata[, -1], use = "pairwise.complete.obs"), 2) 
 
-## Show the first six rows:
+# Show the first six rows:
 head(sleepdata)
 
-## Show the last six rows:
+# Show the last six rows:
 tail(sleepdata)
 ```
 
@@ -238,7 +237,7 @@ these data, you would need to account for such relations in your analysis.
 
 ---
 
-##
+
 
 **Subset the data**
 
@@ -268,7 +267,7 @@ a. The first approach uses standard, base R subsetting procedures:
 ```
 
 ```{r}
-## Negate the logical vector to select all rows other than the exclusions:
+# Negate the logical vector to select all rows other than the exclusions:
 sleepdata2 <- sleepdata[!exclusions, ]
 ```
 
@@ -302,9 +301,11 @@ much more robust to changes in the data.
 
 ---
 
-## {#plotQ}
+::: {cref-plot}
 
 **Plot brain weight as a function of species**
+
+:::
 
 Use the `sleepdata2` dataset and base R graphics routines to create a plot of 
 *brain weight* against *species*.
@@ -315,28 +316,30 @@ plot(brw ~ species, data = sleepdata2)
 
 ---
 
-## {#flagQ}
+::: {cref-flag}
 
 **Conditional case selection**
+
+:::
 
 Some animals have much heavier brains than other animals. Find the names of all 
 animals that have a brain weight larger than 1 standard deviation above the mean 
 brain weight. 
 
 ```{r}
-## Create a logical vector flagging the rows with extreme brain weights:
+# Create a logical vector flagging the rows with extreme brain weights:
 bigBrains <- sleepdata2$brw > (mean(sleepdata2$brw) + sd(sleepdata2$brw))
 
-## Extract the names from any row flagged by the above vector:
+# Extract the names from any row flagged by the above vector:
 as.character(sleepdata2$species[bigBrains])
 ```
 
-##
+
 
 **Plot of big-brained animals**
 
-Replicate the plot from Question \@ref(plotQ) with only the animals you flagged 
-in Question \@ref(flagQ).
+Replicate the plot from @cref-plot with only the animals you flagged 
+in @cref-flag
 
    - Do not plot any information about the other animals.
 
@@ -389,9 +392,9 @@ plot(brw ~ species, data = sleepdata3)
 
 ---
 
-## {#saveQ}
-
+::: {cref-save}
 **Save the current workspace**
+:::
 
 Now that we have imported some data and done some analyses and data 
 manipulations, we may want to save the current workspace (i.e. the current state 
@@ -416,7 +419,7 @@ save(sleepdata, file = "sleepdata.RData")
 
 ---
 
-##
+
 
 **Clear the workspace**
 
@@ -430,12 +433,12 @@ This is a very handy line of code to memorize. It will clear nearly everything
 from your current workspace. If you're curious about how it does so, check the 
 help files for the `rm()` and `ls()` functions.
 
-##
+
 
 **Load a saved workspace**
 
 Use the `load()` function to load the *practical3.RData* workspace that you 
-saved in Question \@ref(saveQ).
+saved in @cref-save.
 
 ```{r}
 load("practical3.RData")
@@ -443,14 +446,14 @@ load("practical3.RData")
 
 ---
 
-##
+
 
 **Load a saved dataset**
 
 1. Use the `rm()` function to remove the `sleepdata` dataset from the 
 environment.
 1. Use the `load()` function to reload the `sleepdata` dataset from the 
-*sleepdata.RData* workspace you saved in Question \@ref(saveQ).
+*sleepdata.RData* workspace you saved in @cref-save
 
 ```{r}
 rm(sleepdata)
@@ -459,7 +462,7 @@ load("sleepdata.RData")
 
 ---
 
-##
+
 
 **A better way to read/write R data objects**
 
